@@ -1,12 +1,12 @@
 # 📝 TIL - 240424 Concurrency
 ## 학습 내용
-[1. Swift Concurrency](#1-Swift-Concurrency)</br>
-[2. Async/Await](#2-Async/Await)</br>
-[3. GCD(Grand Central Dispatch)](#3-GDC(Grand-Central-Dispatch))</br>
-[4. main, global()](#4-main,-global())</br>
+[1. 병렬 프로그래밍 vs 동시성 프로그래밍](#1-병렬 프로그래밍-vs-동시성 프로그래밍)</br>
+[2. async vs sync](#2-async-vs-sync)</br>
+[3. GCD(Grand Central Dispatch)](#3-GDC\(Grand-Central-Dispatch\))</br>
+[4. main, global()](#4-main\,-global\(\))</br>
 [5. Completion Handler](#5-Completion-Handler)</br>
 [6. Async/Await](#6-Async/Awiat)</br>
-[참고자료](#참고자료)</br>
+[7. 참고자료](#7-참고자료)</br>
 ## 🎯 학습 목표
 |상태|목표|
 |---|---|
@@ -22,7 +22,7 @@
 ### 1. 병렬 프로그래밍 vs 동시성 프로그래밍
 - __병렬 프로그래밍:__ CPU가 여러 개 있을 때 가능하며 실제로 동시에 작업을 처리하고잇는 것.
 - __동시성 프로그래밍:__ CPU 하나를 기준으로 하며 여러 일을 동시에 처리하는 것으로 보이지만 실제로는 아주 빠르게 Context Switching을 하고 있는 것.</br>
-<img src = ""/>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/Concurrency/%EC%8B%B1%EA%B8%80%EC%BD%94%EC%96%B4%EB%A9%80%ED%8B%B0%EC%BD%94%EC%96%B4.png" width = "300" />
 </br>
 
 ### 2. async vs sync
@@ -66,16 +66,17 @@ Swift에서 Concurrency Programming을 구현하는 방법에는 ```Completion H
 Completion Handler를 사용하는 방법은 전통적으로 많이 사용되던 방법이지만 아래와 같은 단점들을 가지고 있다.</br>
 - __과도한 중첩코드 발생(장풍코드(?))__
   Completion Handler의 호출이 반복되는 경우 Code는 장풍을 맞은거마냥 가독성이 좋지 않게 된다.</br>
-  이 경우 Error Handling까지 더해지면 더더욱 지저분한 코드가 된다.
+  이 경우 Error Handling까지 더해지면 더더욱 지저분한 코드가 된다.</br>
+  <img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/Concurrency/CompletionHandler_%EC%A4%91%EC%B2%A9%EC%BD%94%EB%93%9C.png" width = "800"/>
 
 - __오류발생__
   Completion Handler를 사용하는 경우 작업 종료 후 completion handler를 호출해주어야 한다.</br>
   호출해 주지 않는 경우 프로그램은 어떠한 에러 표시 없이 중단되는데 호출하지 않아도 컴파일러는 잡아내지 못하므로 에러를 발생시키기 쉽다.</br>
-  <img src = "" />
+  <img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/Concurrency/CompletionHandler_%ED%98%B8%EC%B6%9C%EC%83%9D%EB%9E%B5.png" width = "800"/>
 
 - __에러처리가 쉽지 않음__
   Error 처리를 위해 코드를 추가하는 순간 코드의 양이 기하급수적으로 늘고 가독성을 해친다.</br>
-  <img src = "" />
+  <img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/Concurrency/CompletionHandler_%EC%98%A4%EB%A5%98%EC%B2%98%EB%A6%AC.png" width = "800" />
   
 </br>
 
