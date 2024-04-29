@@ -3,26 +3,39 @@
 ## 학습 내용
 [1. Architecture란](#1-Architecture란)</br>
 [2. Architecture가 필요한 이유](#2-Architecture가-필요한-이유)</br>
-[3. Architecture의 역할](#2-Architecture의-역할)</br>
+[3. 참고자료](#3-참고자료)
 
-[3. 참고자료](#7-참고자료)</br>
+
 ## 🎯 학습 목표
 |상태|목표|
 |---|---|
 |✅|Architecture에 대해 설명할 수 있다.|
-|✅|Architecture의 중요성에 대해 설명할 수 있다.|
+|✅|Architecture의 필요한 이유 대해 설명할 수 있다.|
 
 </br>
 
 ### 1. Architecture란
-아키텍처는 구성요소들간의 관계, 환경, 설계와 발전을 관리하는 원칙으로 이루어진 시스템의 근본적인 구조를 의미한다.</br>(ANSI/IEEE Std 1471-2000)</br>
-해당 내용은 IEEE가 아키텍처에 대해 내린 정의로 마틴 파울러는 해당 정의가 너무 포괄적인 컴포턴트 개념으로 정의되어 있다고 말한다.</br>
+IEEE가 아키텍처에 대해 내린 정의에 따르면 아키텍처는 구성요소들간의 관계, 환경, 설계와 발전을 관리하는 원칙으로 이루어진 시스템의 근본적인 구조를 의미한다.</br>(ANSI/IEEE Std 1471-2000)</br>
+하지만 마틴 파울러는 해당 정의가 너무 포괄적인 컴포넌트 개념으로 정의되어 있다 말하였다.</br>
+- 아키텍처는 소프트웨어 개발에 있어 구성요소들의 관계를 표현하고 이후 활동에 대한 기준을 말한다.</br>
 
 ### 2. Architecture가 필요한 이유
-아키텍처는 아키텍트 개발자가 요구사항을 토대로 어떤 콤포넌트와 인터페이스로 구성할지 디자인한 뒤 개발팀에 공유하고 합의를 이루어 만들어낸 것이다.</br>
-아키텍처는 프로젝트 전반에 대한 가이드 역할을 하며 프로젝트 시작 단계에서 결정되는 것이 지향된다.</br>
-왜냐, 아키텍처는 바꾸기 힘들고 
+소프트웨어 아키텍처의 목표는 __필요한 시스템을 만들고 유지보수 하는데 투입되는 인력을 최소화 하는 것__ 이다.</br>
+이는 비용 문제와 직결되며 우리 사회가 추구하는 경제적 가치와 일치한다.
+
+
+만약 우리가 같은 기능을 가지고 있는 앱 두 개 중 하나를 구매한다고 가정해보자.</br>
+두 개의 앱은 완전히 동일한 기능을 가지고 있지만 하나는 훌륭히 구조화되어 있고 비싸며 나머지는 그렇지 않고 저렴하다.</br>
+이 때 우리에게 전자를 골라야하는 이유가 있을까?</br>
+기능은 동일하고 심지어 후자는 저렴한데 말이다.
+
+
+이 때 우리는 장기적 관점에서 결정을 내려야한다.</br>
+소프트웨어는 늘 새로운 기능 추가(확장성)에 열려있어야 하며 그렇지 못한 경우 소프트웨어를 수정하는 것은 여태 소프트웨어를 만들었던 시간의 배가 걸릴지 모른다.
+
+~~이 부분은 내가 예전 앱을 개발할 당시 정말 절실하게 느낀 부분이다.~~ 
 
 ### 3. 참고자료
-[MartinFowler-Making Architecture Matter](https://www.youtube.com/watch?v=4E1BHTvhB7Y)
-[MartinFowler-Who Needs an Architect?](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)
+[MartinFowler-Making Architecture Matter](https://www.youtube.com/watch?v=4E1BHTvhB7Y)</br>
+[MartinFowler-Who Needs an Architect?](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)</br>
+Clean Architecture - 1장 설계와 아키텍처란?
