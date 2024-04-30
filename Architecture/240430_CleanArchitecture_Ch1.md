@@ -19,10 +19,10 @@
 이는 각각 `행위`와 `구조(아키텍처)`로 내용은 아래와 같다.</br>
 - __행위__ : 행위는 흔히 프로그래머의 역할로 일컬어지는 것으로써 기능 명세와 요구사항을 구체화하는 것이다.
 - __구조__ : 구조, 즉 아키텍처는 소프트웨어가 변경에 자유로울 수 있도록 소프트웨어를 구성하기 위한 의사결정을 이야기 한다.
-</br>
-이 중 높은 가치를 선택하라고 하면 물논 `구조(아키텍처)`이다.</br>
+  
+이 중 높은 가치를 선택하라고 하면 물논 `구조(아키텍처)`이다.</br></br></br>
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch1/CleanArchitecture_Ch1.png" width = "500"/>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch1/CleanArchitecture_Ch1.png" width = "300"/>
 
 위 그림은 아이젠하워 매트릭스로 `행위`는 빨강, `구조(아키텍처)`는 파랑 부분을 나타낸다.</br>
 우리가 늘 주의해야 할 것은 아키텍처가 "긴급"하지 않다고 해서 간과했다가는 이후 큰 낭패로 이어질 수 있다는 것이다.
