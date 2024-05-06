@@ -2,10 +2,10 @@
 ## 학습 내용
 [1. 병렬 프로그래밍 vs 동시성 프로그래밍](#1-병렬-프로그래밍-vs-동시성-프로그래밍)</br>
 [2. async vs sync](#2-async-vs-sync)</br>
-[3. GCD(Grand Central Dispatch)](#3-GDC\(Grand-Central-Dispatch\))</br>
-[4. main, global()](#4-main\,-global\(\))</br>
+[3. GCD(Grand Central Dispatch)](#3-GDCGrand-Central-Dispatch)</br>
+[4. main, global()](#4-main-global)</br>
 [5. Completion Handler](#5-Completion-Handler)</br>
-[6. Async/Await](#6-Async/Awiat)</br>
+[6. Async/Await](#6-AsyncAwiat)</br>
 [7. 참고자료](#7-참고자료)</br>
 ## 🎯 학습 목표
 |상태|목표|
