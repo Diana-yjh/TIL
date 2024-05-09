@@ -34,6 +34,11 @@ __Scene__ 에 표시되는 내용을 처리하고 앱이 표시되는 방식을 
 
 ```SceneDelegate```에서는 Scene의 상태에 대해 반응하는 메소드 들이 정의 되어 있고 이를 통해 Scene의 상태에 따른 여러 적절한 동작들을 수행해 줄 수 있습니다.</br>
 
+#### Scene이란?
+- Scene에는 UI의 인스턴스를 나타내는 window와 view controller가 들어있다.
+- 각 scene에 해당하는 UIWindowSceneDelegate를 갖고 있으며 이 객체는 UIKit과 앱 간의 상호작용을 조정하는데 사용된다.
+- Scene들은 같은 메모리와 앱 프로세스 공간을 공유하면서 서로 동시에 실행되기 때문에 하나의 앱은 여러 Scene과 Scene Delegate 객체를 동시에 활성화 할 수 있다.
+
 ### 3. AppDelegate와 SceneDelegate가 나뉜 이유
 <img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/AppLifeCycle/AppLifeCycle_Scenes.jpg" width = "550" ></br>
 큰 디스플레이, 즉 아이패드가 발달하면서 화면분할 이라는 기능을 지원하게 되었습니다.</br>
@@ -65,3 +70,4 @@ __Scene__ 에 표시되는 내용을 처리하고 앱이 표시되는 방식을 
 [Apple Docs - UISceneDelegate](https://developer.apple.com/documentation/uikit/uiscenedelegate)</br>
 [Apple Article - Managing your app's life cycle](https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle)</br>
 [WWDC - Architecting Your App for Multiple Windows](https://developer.apple.com/videos/play/wwdc2019/258/)</br>
+[Charlie님의 블로그](https://velog.io/@tmdckd232/Swift-App-Delegate-Scene-Delegate)
