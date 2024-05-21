@@ -8,6 +8,8 @@
 [240509_UIResponder](https://github.com/Diana-yjh/TIL/blob/main/Swift/240509_UIResponder.md)</br>
 [240511_SwiftPackageManager](https://github.com/Diana-yjh/TIL/blob/main/Swift/240511_SwiftPackageManager.md)</br>
 [240515_RxSwift](https://github.com/Diana-yjh/TIL/blob/main/Swift/240515_RxSwift.md)</br>
+[240519_CoreData](https://github.com/Diana-yjh/TIL/blob/main/Swift/240519_CoreData.md)</br>
+[240521_DependencyInjection](https://github.com/Diana-yjh/TIL/blob/main/Swift/240521_DependencyInjection.md)</br>
 
 ## 📂 Architecture
 [240426_Architecture](https://github.com/Diana-yjh/TIL/blob/main/Architecture/240426_Architecture.md)</br>
