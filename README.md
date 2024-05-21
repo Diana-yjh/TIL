@@ -1,5 +1,10 @@
 # ✍️ TIL
-오늘 하루 배운 개념에 대한 정리
+내가 오늘 하루 공부하고 경험한 내용에 대해 정리합니다.</br>
+
+## 📝 Category
+[Swift](#-Swift)</br>
+[Architecture](#-Architecture)</br>
+[DesignPattern](#-DesignPattern)</br>
 
 ## 📂 Swift
 [240424_Concurrency](https://github.com/Diana-yjh/TIL/blob/main/Swift/240424_Concurrency.md)</br>
