@@ -30,12 +30,12 @@ SRP의 위반 사례로는 아래와 같은 것이 있다.</br>
 
 #### 1. 사례 1: 우발적 중복
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_SRP1.heic" width = "350"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_SRP1.png" width = "350"/></br>
 
 위 이미지에서 `Employee` 클래스는 하나의 클래스 내부의 세 가지 메소드가 서로 다른 액터를 책임지기 때문에 SRP를 위반한다.</br>
 서로 다른 액터를 책임지는 메서드가 하나의 클래스 내부에 묶여버린 것이다.</br>
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_SRP1.heic" width = "350"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_SRP2.png" width = "350"/></br>
 
 여기서 `calculatePay` 메소드와 `reportHours` 메소드는 편의 메소드 `regularHours`를 공유하고 있습니다.</br>
 
@@ -58,7 +58,7 @@ COO도 본인 팀 나름 계획을 세워 `Employee` 수정을 진행하였고�
 
 물논 이렇게 하면 개발자가 세 가지 클래스를 인스턴스화 하여 추적해야한다는 번거로움이 발생합니다.</br>
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_Farcade.heic" width = "500"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_Farcade.png" width = "500"/></br>
 
 이 대책으로 __퍼사드 패턴__ 이 존재합니다.</br>
 퍼사드 패턴은 각 클래스의 객체를 생성한 뒤 요청하는 메서드를 가지는 객체로 일을 위임시킵니다.</br>
@@ -85,7 +85,7 @@ OCP의 이해를 돕기 위한 사고실험은 아래와 같습니다.</br>
 이렇게 비효율적인 상황을 방지하기 위해서 우리가 택할 수 있는 방법은 __서로 다른 목적으로 변경되는 요소를 적절히 분리하기(SRP)__, __이들 요소 사이의 의존성을 체계화 허가(DIP)__ 가 있습니다.</br>
 이렇게 클래스를 단위로 분할하고 이들 클래스를 이중선으로 표시한 컴포넌트 단위로 구분한 것이 아래와 같습니다.</br>
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_OCP1.heic" width = "500" /></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_OCP1.png" width = "500" /></br>
 
 위 구조는 `Controller`, `Interactor`, `Database` 그리고 `Presenter`와 `View`를 담당하는 컴포넌트들로 구성되어 있습니다.</br>
 여기서 화살표들은 __의존성__ 을 나타내는데 모든 화살표는 이중선과 한 방향으로만 교차하고 있습니다.</br>
@@ -93,7 +93,7 @@ OCP의 이해를 돕기 위한 사고실험은 아래와 같습니다.</br>
 
 위 그림을 단순화 하여 정리하면 아래와 같아집니다.</br>
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_OCP2.heic" width = "450" /></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_OCP2.png" width = "450" /></br>
 
 위의 그림을 보면 모든 화살표는 `Interactor`로 흐르며 이것은 즉 `Interactor`는 다른 컴포넌트의 변경으로부터 자유로우며 제일 고수준의 __업무 규칙__ 을 포함한 컴포넌트임을 의미합니다.</br>
 
@@ -141,7 +141,7 @@ POP(객체지향 프로그래밍)이 처음 나타났던 초창기에는 이 대
 
 ### ✅ 4. ISP(인터페이스 분리 원칙)
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_ISP1.png" width = "400"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_ISP.png" width = "400"/></br>
 
 위의 그림을 보면 각각의 유저들은 OPS 클래스 내부의 메소드를 사용하기 위해 OPS 클래스를 호출하고 있습니다.</br>
 이때 유저가 하나의 메소드만 사용한다고 해도 OPS 클래스 자체를 호출하고 있으므로 다른 메소드 들에 대해서도 의존성이 생겨버리죠.</br>
