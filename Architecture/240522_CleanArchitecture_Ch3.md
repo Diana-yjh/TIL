@@ -30,12 +30,12 @@ SRP의 위반 사례로는 아래와 같은 것이 있다.</br>
 
 #### 1. 사례 1: 우발적 중복
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_SRP.png" width = "350"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_SRP1.heic" width = "350"/></br>
 
 위 이미지에서 `Employee` 클래스는 하나의 클래스 내부의 세 가지 메소드가 서로 다른 액터를 책임지기 때문에 SRP를 위반한다.</br>
 서로 다른 액터를 책임지는 메서드가 하나의 클래스 내부에 묶여버린 것이다.</br>
 
-<img src = "" width = "350"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_SRP1.heic" width = "350"/></br>
 
 여기서 `calculatePay` 메소드와 `reportHours` 메소드는 편의 메소드 `regularHours`를 공유하고 있습니다.</br>
 
@@ -58,7 +58,7 @@ COO도 본인 팀 나름 계획을 세워 `Employee` 수정을 진행하였고�
 
 물논 이렇게 하면 개발자가 세 가지 클래스를 인스턴스화 하여 추적해야한다는 번거로움이 발생합니다.</br>
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_Farcade" width = "500"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_Farcade.heic" width = "500"/></br>
 
 이 대책으로 __퍼사드 패턴__ 이 존재합니다.</br>
 퍼사드 패턴은 각 클래스의 객체를 생성한 뒤 요청하는 메서드를 가지는 객체로 일을 위임시킵니다.</br>
@@ -85,7 +85,7 @@ OCP의 이해를 돕기 위한 사고실험은 아래와 같습니다.</br>
 이렇게 비효율적인 상황을 방지하기 위해서 우리가 택할 수 있는 방법은 __서로 다른 목적으로 변경되는 요소를 적절히 분리하기(SRP)__, __이들 요소 사이의 의존성을 체계화 허가(DIP)__ 가 있습니다.</br>
 이렇게 클래스를 단위로 분할하고 이들 클래스를 이중선으로 표시한 컴포넌트 단위로 구분한 것이 아래와 같습니다.</br>
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_OCP1" width = "500" /></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_OCP1.heic" width = "500" /></br>
 
 위 구조는 `Controller`, `Interactor`, `Database` 그리고 `Presenter`와 `View`를 담당하는 컴포넌트들로 구성되어 있습니다.</br>
 여기서 화살표들은 __의존성__ 을 나타내는데 모든 화살표는 이중선과 한 방향으로만 교차하고 있습니다.</br>
@@ -93,7 +93,7 @@ OCP의 이해를 돕기 위한 사고실험은 아래와 같습니다.</br>
 
 위 그림을 단순화 하여 정리하면 아래와 같아집니다.</br>
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_OCP2" width = "450" /></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_OCP2.heic" width = "450" /></br>
 
 위의 그림을 보면 모든 화살표는 `Interactor`로 흐르며 이것은 즉 `Interactor`는 다른 컴포넌트의 변경으로부터 자유로우며 제일 고수준의 __업무 규칙__ 을 포함한 컴포넌트임을 의미합니다.</br>
 
@@ -107,7 +107,7 @@ OCP의 이해를 돕기 위한 사고실험은 아래와 같습니다.</br>
 
 ### ✅ 3. LSP(리스코프 치환 원칙)
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_LSP" width = "450"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_LSP.png" width = "450"/></br>
 
 위의 그림은 `License` 클래스를 호출하는 `Billing` 어플리케이션을 나타내고 있습니다.</br>
 여기서 `License` 클래스는 LSP를 준수하죠.(~~냅다 결론~~).</br>
@@ -118,7 +118,7 @@ OCP의 이해를 돕기 위한 사고실험은 아래와 같습니다.</br>
 
 #### 정사각형 / 직사각형 문제
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_RectangleSquare" width = "450"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_RectangleSquare.png" width = "450"/></br>
 
 여기서 `User`은 `Rectangle(직사각형)` 클래스를 호출할 수 있고 `Rectangle`의 하위타입으로 `Square(정사각형)`가 존재하고 있습니다.</br>
 
@@ -141,14 +141,14 @@ POP(객체지향 프로그래밍)이 처음 나타났던 초창기에는 이 대
 
 ### ✅ 4. ISP(인터페이스 분리 원칙)
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_ISP1" width = "400"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_ISP1.png" width = "400"/></br>
 
 위의 그림을 보면 각각의 유저들은 OPS 클래스 내부의 메소드를 사용하기 위해 OPS 클래스를 호출하고 있습니다.</br>
 이때 유저가 하나의 메소드만 사용한다고 해도 OPS 클래스 자체를 호출하고 있으므로 다른 메소드 들에 대해서도 의존성이 생겨버리죠.</br>
 이렇게 불필요한 의존성으로 인해 OPS 내부 메소드의 변경이 일어날 때마다 모든 유저는 코드를 재 컴파일하여 사용해야합니다.</br>
 이는 아래와 같이 오퍼레이션을 분리함으로써 해결할 수 있다.</br>
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_ISP2" width = "400"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_ISP2.png" width = "400"/></br>
 
 이때 고려해야할 점은 동적 타입 언어(파이썬, 루비 등)은 런타임에서 추론이 발생하므로 재컴파일과 재배포가 필요 없어 위와 같은 상황에서 자유롭습니다.(하지만 Swift는 정적 언어 ^^)</br>
 그리고 같은 정적 언어라고 해도 ISP는 언어 종류에 따라 영향받는 정도가 다릅니다.</br>
@@ -175,7 +175,7 @@ DIP에서 전달하고자 하는 내용은 아래와 같습니다.</br>
 위의 실천법을 준수하기 위해서 변동성이 큰 구체적인 객체의 생성은 늘 주의가 필요합니다.</br>
 이를 위해서 우리는 __추상 팩토리__ 를 사용할 수 있습니다.</br>
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_DIP" width = "400"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch3/CleanArchitecture_Ch3_DIP.png" width = "400"/></br>
 
 여기서 곡선은 아키텍처 경계를, 화살표는 소스코드의 의존성을 의미하며 곡선은 구체 컴포넌트와 추상 컴포넌트를 분리합니다.</br>
 여기서 주의해야할 점은 소스 코드의 제어흐름은 의존성과 반대 방향으로 곡선을 가로지릅니다.</br>
