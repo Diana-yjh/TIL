@@ -1,4 +1,4 @@
-# 📝 TIL - 2405XX CleanArchitecture Ch.4
+# 📝 TIL - 240523 CleanArchitecture Ch.4
 
 해당 글은 마틴 파울러의 `클린아키텍처 4부 - 컴포넌트 원칙` 을 토대로 작성되었습니다.
 
