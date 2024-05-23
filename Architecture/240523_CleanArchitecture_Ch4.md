@@ -69,7 +69,7 @@ ISP와 동일하게 필요하지 않은 것에 의존하지 말라고 합니다<
 우리가 앞서 살펴보았던 REP, CCP, CRP은 서로 상충되는 원칙을 가지고 있습니다.</br>
 
 <img src = “https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Diagram.png” width = “400”/></br>
-(~~이미지는 다운로드 받아오면 된다는 것을 뒤늦게 깨닳아버림~~)</br>
+(이미지 로드 이슈: Resources/CleanArchitecture_Ch4_Diagram.png)</br>
 
 각각 REP, CCP는 포함, CRP는 배제 원칙의 특징을 보여줍니다.</br>
 우리는 여기서 균형을 이룰 방법을 찾아야 하죠.</br>
