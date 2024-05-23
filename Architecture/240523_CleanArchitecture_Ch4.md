@@ -140,12 +140,12 @@ Entities를 컴파일, 테스트, 릴리스 하고 Presenters, View, Controllers
 - `Entities`와 `Authorizer`가 모두 의존하는 클래스들을 새로운 컴포넌트로 묶어 분리하기</br>
   <img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Seperate_Components.png" width = "450"/></br>
 
-#### 3. 하향식(top- down) 설계
+#### 2. 하향식(top- down) 설계
 이렇게 우리는 컴포넌트가 하향식 설계가 아닌 __시스템이 성장하고 변경될 때 함께 진화하는 존재__ 라는 것을 확인하였습니다.</br>
 결국 위에서 컴포넌트 확인한 의존성 다이어그램은 어플리케이션의 빌드 가능성과 유지보수성을 보여주는 지도라는 것이죠.</br>
 시스템 없이는 컴포넌트 의존성 그래프는 생성될 수 없어 해당 그래프는 클래스가 구현된 이후에 생성하는 것이 좋습니다.</br>
 
-#### 4. SDP: 안정된 의존성 원칙
+#### 3. SDP: 안정된 의존성 원칙
 __안정성의 방항으로(더 안정된 쪽으로) 의존하라__ </br>
 설계는 정적일 수 없으며 컴포넌트의 일부는 변동성을 지니도록 설계됩니다.</br>
 이 때 우리는 변경이 쉽지 않은 컴포넌트를 변동이 잦은 컴포넌트에 의존하게 만들어서는 안되죠.</br>
