@@ -68,7 +68,7 @@ ISP와 동일하게 필요하지 않은 것에 의존하지 말라고 합니다<
 
 우리가 앞서 살펴보았던 REP, CCP, CRP은 서로 상충되는 원칙을 가지고 있습니다.</br>
 
-<img src = “” width = “500”/></br>
+<img src = “https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Diagram.png” width = “500”/></br>
 (~~이미지는 다운로드 받아오면 된다는 것을 뒤늦게 깨닳아버림~~)</br>
 
 각각 REP, CCP는 포함, CRP는 배제 원칙의 특징을 보여줍니다.</br>
@@ -111,7 +111,7 @@ ISP와 동일하게 필요하지 않은 것에 의존하지 말라고 합니다<
 바로 __컴포넌트 사이의 의존성 구조를 반드시 관리해야한다__ 는 것이죠.</br>
 이 __의존성 구조__ 에서는 __순환__ 이 있어서는 안됩니다.</br>
 
-<img src = "" width = "" /></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Components_Diagram.png" width = "450" /></br>
 
 위 그림은 다소 전형적인 어플리케이션의 모습입니다.</br>
 구조는 __방향 그래프(Directed Graph)__ 이며 컴포넌트는 __정점(Vertex)__, 의존성 관계는 __방향이 있는 간선(Directed Edge)__ 에 해당합니다.</br>
@@ -127,17 +127,18 @@ ISP와 동일하게 필요하지 않은 것에 의존하지 말라고 합니다<
 Entities를 컴파일, 테스트, 릴리스 하고 Presenters, View, Controllers 들도 차례대로 같은 과정을 거치죠.</br>
 
 그럼 이번엔 __순환 의존성__ 이 발생하는 경우를 확인해보겠습니다.</br>
-<img src = "" width = "" /></br>
+
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Acyclic_Diagram.png" width = "450" /></br>
 
 위 그림에서 `Authorizer`에 대한 `Entities`의 의존성이 발생함에 따라 순환 의존성이 생겨버렸습니다.</br>
 이렇게 되면 `Database`를 수정하고자 할 때 `Interactors`, `Entities`, `Authorizer` 모두와 호환되어야 해 릴리스가 복잡해집니다.</br>
 
 그럼 이렇게 발생한 문제를 해결하기 위해 우리는 __순환을 끊어내야__ 합니다.</br>
 이를 위한 주요 메커니즘은 아래와 같습니다.</br>
-- 의존성 역전 원칙(DIP)
-  <img src = "" width = "400"/></br>
-- `Entities`와 `Authorizer`가 모두 의존하는 클래스들을 새로운 컴포넌트로 묶어 분리하기
-  <img src = "" width = "450"/></br>
+- 의존성 역전 원칙(DIP)</br>
+  <img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_DIP.png" width = "400"/></br>
+- `Entities`와 `Authorizer`가 모두 의존하는 클래스들을 새로운 컴포넌트로 묶어 분리하기</br>
+  <img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Seperate_Components.png" width = "450"/></br>
 
 #### 3. 하향식(top- down) 설계
 이렇게 우리는 컴포넌트가 하향식 설계가 아닌 __시스템이 성장하고 변경될 때 함께 진화하는 존재__ 라는 것을 확인하였다.</br>
@@ -149,9 +150,9 @@ __안정성의 방항으로(더 안정된 쪽으로) 의존하라__ </br>
 설계는 정적일 수 없으며 컴포넌트의 일부는 변동성을 지니도록 설계된다.</br>
 이 때 우리는 변경이 쉽지 않은 컴포넌트를 변동이 잦은 컴포넌트에 의존하게 만들어서는 안된다.</br>
 
-|1번|<img src = "" width = "450"/>|
+|1번|<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Stable.png" width = "450"/>|
 |---|---|
-|__2번__|<img src = "" width = "450"/>|
+|__2번__|<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_UnStable.png" width = "450"/>|
 
 위 1번 그림에서 X는 __안정된 컴포넌트__ 이다.</br>
 세 개의 컴포넌트가 X에 의존하며 따라서 X는 변경이 지양되기 때문이다.</br>
@@ -166,11 +167,11 @@ __안정성의 방항으로(더 안정된 쪽으로) 의존하라__ </br>
 
 그렇다고 모든 컴포넌트가 반드시 안정적이어야 하는 것은 아니다.</br>
 
-<img src = "" width = "350"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_SDP_Unstable.png" width = "350"/></br>
 
 이처럼 SDP가 위배되는 상황도 확인할 수 있다.</br>
 이 문제를 해결하기 위해서는 우리는 DIP를 사용할 수 있다.</br>
 
-<img src = "" width = "350"/></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_SDP_DIP.png" width = "350"/></br>
 
 위 그림에서 `UServer`를 우리는 __추상 컴포넌트__ 라고 부른다.</br>
