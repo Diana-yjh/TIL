@@ -68,7 +68,7 @@ ISP와 동일하게 필요하지 않은 것에 의존하지 말라고 합니다<
 
 우리가 앞서 살펴보았던 REP, CCP, CRP은 서로 상충되는 원칙을 가지고 있습니다.</br>
 
-<img src = “https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Diagram.png” width = “500”/></br>
+<img src = “https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Diagram.png” width = “400”/></br>
 (~~이미지는 다운로드 받아오면 된다는 것을 뒤늦게 깨닳아버림~~)</br>
 
 각각 REP, CCP는 포함, CRP는 배제 원칙의 특징을 보여줍니다.</br>
@@ -128,7 +128,7 @@ Entities를 컴파일, 테스트, 릴리스 하고 Presenters, View, Controllers
 
 그럼 이번엔 __순환 의존성__ 이 발생하는 경우를 확인해보겠습니다.</br>
 
-<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Acyclic_Diagram.png" width = "450" /></br>
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Acyclic_DIagram.png" width = "450" /></br>
 
 위 그림에서 `Authorizer`에 대한 `Entities`의 의존성이 발생함에 따라 순환 의존성이 생겨버렸습니다.</br>
 이렇게 되면 `Database`를 수정하고자 할 때 `Interactors`, `Entities`, `Authorizer` 모두와 호환되어야 해 릴리스가 복잡해집니다.</br>
@@ -152,7 +152,7 @@ __안정성의 방항으로(더 안정된 쪽으로) 의존하라__ </br>
 
 |1번|<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Stable.png" width = "450"/>|
 |---|---|
-|__2번__|<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_UnStable.png" width = "450"/>|
+|__2번__|<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch4/CleanArchitecture_Ch4_Unstable.png" width = "450"/>|
 
 위 1번 그림에서 X는 __안정된 컴포넌트__ 이다.</br>
 세 개의 컴포넌트가 X에 의존하며 따라서 X는 변경이 지양되기 때문이다.</br>
