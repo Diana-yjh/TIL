@@ -3,9 +3,10 @@
 ## 학습 내용
 
 [1. 팩토리 메소드 패턴이란?](#-1-팩토리-메소드-패턴이란)</br>
-[2. 팩토리 메소드 패턴 구현](#-2-팩토리-메소드-패턴-구현)</br>
-[3. 팩토리 메소드 패턴의 장단점](#-3-팩토리-메소드-패턴의-장단점)</br>
-[4. 참고 자료](#4-참고-자료)</br>
+[2. 팩토리 메소드 패턴 예시](#-3-팩토리-메소드-패턴-예시)</br>
+[3. 팩토리 메소드 패턴 구현](#-3-팩토리-메소드-패턴-구현)</br>
+[4. 팩토리 메소드 패턴의 장단점](#-4-팩토리-메소드-패턴의-장단점)</br>
+[5. 참고 자료](#5-참고-자료)</br>
 
 </br>
 
@@ -35,3 +36,87 @@ Swift에서 인터페이스는 Protocol 이라고 생각할 수 있습니다.</b
     
 
 </br>
+
+### 2. 팩토리 메소드 패턴 예시
+하나의 예시를 들어보겠습니다.</br>
+우리가 운송회사를 운영하고 있다고 합니시다. 우리에게는 트럭이 한대 있죠.</br>
+이 트럭은 주차장에 멈춰있기도 하고 고속도로를 달려 배송을 해주기도 하는 등 다양한 역할을 수행합니다.</br>
+
+그리고 몇년 후 열심히 운송회사를 운영한 결과 회사의 규모가 커졌습니다.</br>
+이제 해외에서도 고객들이 제품 배송을 원하게 되었어요.</br>
+해외 고객들에게 제품을 배송해주기 위해 우리는 배를 사용해야 하는 상황이 되었습니다.</br>
+하지만 우리가 여태 구축해 놓은 배송 방법과 과정들은 모두 육지 배송을 하는 트럭에 맞춰져 있죠.</br>
+변경이 불가능합니다.</br>
+
+이러한 상황에서 우리는 `Factory Method` 를 사용할 수 있습니다.</br>
+
+`Factory Method`에서 우리는 트럭 객체를 생성할 수 있으며 배를 추가 할 떄는 역시 `Factory Method`에 코드를 추가해주면 됩니다.</br>
+
+결국 객체에 수정이 생기는 경우 `Factory Method`만 수정하면 되는 것이죠.</br>
+
+### 3. 팩토리 메소드 패턴 구현
+그럼 위의 예시를 `Swift`로 구현해보겠습니다.</br>
+우선 우리는 객체의 행위를 정의해줄 인터페이스가 필요합니다.</br>
+우리는 이를 `(Abstract) Product`라고 하기로 했죠.</br>
+
+```swift
+protocol Transport {
+    func loadStuff() // 물건 적재
+    func sortStuff() // 물건 분류
+    func deliver() // 배송
+}
+```
+
+</br>
+그 다음 우리는 이렇게 정의한 일을 해줄 객체를 생성합니다.</br>
+우리는 이를 `Concrete Product`라고 합니다.</br>
+Product 인터페이스에 명시된 일을 구체화 한다는 것이죠.</br>
+```swift
+struct Truck: Transport { // 트럭
+    func loadStuff() {
+        print("Truck load stuff")
+    }
+
+    func sortStuff() {
+        print("Truck sort stuff")
+    }
+
+    func deliver() {
+        print("Truck deliver")
+    }
+}
+```
+
+```swift
+struct Ship: Transport {
+    func loadStuff() {
+        print("Ship load stuff")
+    }
+
+    func sortStuff() {
+        print("Ship sort stuff")
+    }
+
+    func deliver() {
+        print("Ship deliver")
+    }
+}
+```
+
+</br>
+
+이렇게 객체 구현은 끝이 났습니다.</br>
+이제 우리는 이 객체를 인스턴스화하여 사용하기만 하면 되는데 이 인스턴스화를 대신해주는 것이 `Factory Method` 입니다.</br>
+`Factory Method`도 물논 형식만 명시해주는 `(Abstract) Factory Method`가 존재합니다.</br>
+
+```swift
+protocol TransportFactory {
+    func createTransport() -> Transport { // 객체를 생성한 뒤 리턴해야하므로 Transport 리턴타입
+        return Truck()
+    }
+}
+```
+
+### 4. 참고 자료
+[Refactoring GURU - Factory Method](https://refactoring.guru/design-patterns/factory-method)</br>
+[Pingu - Factory Method Pattern](https://icksw.tistory.com/237)</br>
