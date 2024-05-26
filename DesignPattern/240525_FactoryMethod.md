@@ -17,7 +17,7 @@
 간단히 이야기하면 **객체의 생성을 부모 클래스가 아닌 자식 클래스에서 하겠다** 라는 의미입니다.</br>
 팩토리 메소드의 구조는 아래와 같습니다.</br>
 
-<img src = “” width = “450” /> </br>
+<img src = “https://github.com/Diana-yjh/TIL/blob/main/Resources/CleanArchitecture_Ch5\(1\)/CleanArchitecture_Ch5\(1\).png” width = “450” /> </br>
 
 Swift에서 인터페이스는 Protocol 이라고 생각할 수 있습니다.</br>
 위 구조에서 Creator과 Project는 추상 타입(Abstract Type)이며 구현에 대한 청사진만을 가지고 있습니다.</br>
@@ -71,8 +71,9 @@ protocol Transport {
 그 다음 우리는 이렇게 정의한 일을 해줄 객체를 생성합니다.</br>
 우리는 이를 `Concrete Product`라고 합니다.</br>
 Product 인터페이스에 명시된 일을 구체화 한다는 것이죠.</br>
+
 ```swift
-struct Truck: Transport { // 트럭
+struct Truck: Transport { // Truck
     func loadStuff() {
         print("Truck load stuff")
     }
@@ -88,7 +89,7 @@ struct Truck: Transport { // 트럭
 ```
 
 ```swift
-struct Ship: Transport {
+struct Ship: Transport { // Ship
     func loadStuff() {
         print("Ship load stuff")
     }
@@ -110,13 +111,60 @@ struct Ship: Transport {
 `Factory Method`도 물논 형식만 명시해주는 `(Abstract) Factory Method`가 존재합니다.</br>
 
 ```swift
-protocol TransportFactory {
-    func createTransport() -> Transport { // 객체를 생성한 뒤 리턴해야하므로 Transport 리턴타입
+protocol TransportFactory { // Abstract Factory
+    func createTransport() -> Transport // 객체를 생성한 뒤 리턴해야하므로 Transport 리턴타입
+} 
+```
+
+이후 이 `(Abstract) Factory`에서 명시한 메소드를 직접 구현하는 `Concrete Factory`까지 구현하면 Factory Pattern에 대한 구현은 끝이 납니다.</br>
+
+```swift
+struct TruckFactory: TransportFactory { // Truck에 대한 Concrete Factory
+    func selectTransport() -> Transport {
         return Truck()
     }
 }
 ```
 
-### 4. 참고 자료
+```swift
+struct ShipFactory: TransportFactory { // Ship에 대한 Concrete Factory
+    func selectTransport() -> Transport {
+        return Ship()
+    }
+}
+```
+
+이렇게 완성된 팩토리 메소드는 아래와 같이 사용할 수 있습니다.</br>
+
+```swift
+struct Client {
+    func selectTransport(with factory: TransportFactory) -> Transport {
+        return factory.selectTransport()
+    }
+}
+
+let client = Client()
+
+let truckTransport = client.selectTransport(with: TruckFactory())
+let shipTransport = client.selectTransport(with: ShipFactory())
+
+tructTransport.loadStuff()
+shipTransport.loadStuff()
+```
+
+</br>
+
+### 4. 팩토리 메소드 패턴의 장단점
+그럼 이런 `Factory Method Pattern`을 사용했을 때 우리가 얻을 수 있는 장점에는 뭐가 있을까요?</br>
+__장점__ </br>
+- 객체를 생성하는 부분과 코드를 구체화한 부분 사이의 결합을 줄일 수 있습니다.
+- 객체 생성부를 분리함으로써 Single Responsibility Principle을 만족시킵니다.</br>
+- 존재한 코드를 변경하지 않고 새로운 객체를 추가할 수 있으므로 Open/Closed Principle을 만족시킵니다.</br>
+__단점__ </br>
+- 코드를 적용하기 위해서는 수많은 서브클래스를 구현해야 하기 때문에 코드가 복잡해질 수 있습니다.</br>
+
+이렇게 오늘 다양한 디자인 패턴의 기본이 되기 때문에 반드시 숙지해야하는 `Factory Method` 패턴에 대해 알아보았습니다.</br>
+
+### 5. 참고 자료
 [Refactoring GURU - Factory Method](https://refactoring.guru/design-patterns/factory-method)</br>
 [Pingu - Factory Method Pattern](https://icksw.tistory.com/237)</br>
