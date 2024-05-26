@@ -16,7 +16,12 @@
 </br>
 
 ### ✅ 2. Modular Architecture의 장점
-
+- 유연성(Flexibility)
+  유연성은 모듈러 아키텍처의 제일 중요한 장점 중 하나입니다.</br>
+  모듈로 나뉘어진 구조는 시장과 유저의 요구변화에 빠르게 대응 할 수 있도록 합니다.</br>
+  또한 기능 또는 구조에 변경이 생겼을 때 적은 비용으로 시스템 수정이 가능하게 하죠.</br>
+- 효율성(Efficiency)
+- 생선성(Creativity)
 
 ### 3. 참고 자료
 [Modular Architecture in iOS](https://tech.olx.com/modular-architecture-in-ios-c1a1e3bff8e9)</br>
