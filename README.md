@@ -7,7 +7,7 @@
 [Swift](#-Swift)</br>
 [Architecture](#-Architecture)</br>
 [DesignPattern](#-DesignPattern)</br>
-[MartinFowler - Clean Architecture](#-MartinFowler--Clean-Architecture)</br>
+[MartinFowler - Clean Architecture](#-MartinFowlerClean%20-%20Architecture)</br>
 
 ## 📂 Swift
 [240424_Concurrency](https://github.com/Diana-yjh/TIL/blob/main/Swift/240424_Concurrency.md)</br>
@@ -29,8 +29,8 @@
 [240525_FactoryMethod](https://github.com/Diana-yjh/TIL/blob/main/DesignPattern/240525_FactoryMethod.md)</br>
 
 ## 📂 MartinFowler - Clean Architecture
-[240430_CleanArchitecture_Ch1](https://github.com/Diana-yjh/TIL/blob/main/Architecture/240430_CleanArchitecture_Ch1.md)</br>
-[240508_CleanArchitecture_Ch2](https://github.com/Diana-yjh/TIL/blob/main/Architecture/240508_CleanArchitecture_Ch2.md)</br>
-[240522_CleanArchitecture_Ch3](https://github.com/Diana-yjh/TIL/blob/main/Architecture/240522_CleanArchitecture_Ch3.md)</br>
-[240523_CleanArchitecture_Ch4](https://github.com/Diana-yjh/TIL/blob/main/Architecture/240523_CleanArchitecture_Ch4.md)</br>
-[240524_CleanArchitecture_Ch5(1)](https://github.com/Diana-yjh/TIL/blob/main/Architecture/240524_CleanArchitecture_Ch5(1).md)</br>
+[240430_CleanArchitecture_Ch1](https://github.com/Diana-yjh/TIL/blob/main/MartinFowler%20-%20Clean%20Architecture/240430_CleanArchitecture_Ch1.md)</br>
+[240508_CleanArchitecture_Ch2](https://github.com/Diana-yjh/TIL/blob/main/MartinFowler%20-%20Clean%20Architecture/240508_CleanArchitecture_Ch2.md)</br>
+[240522_CleanArchitecture_Ch3](https://github.com/Diana-yjh/TIL/blob/main/MartinFowler%20-%20Clean%20Architecture/240522_CleanArchitecture_Ch3.md)</br>
+[240523_CleanArchitecture_Ch4](https://github.com/Diana-yjh/TIL/blob/main/MartinFowler%20-%20Clean%20Architecture/240523_CleanArchitecture_Ch4.md)</br>
+[240524_CleanArchitecture_Ch5(1)](https://github.com/Diana-yjh/TIL/blob/main/MartinFowler%20-%20Clean%20Architecture/240524_CleanArchitecture_Ch5(1).md)</br>
