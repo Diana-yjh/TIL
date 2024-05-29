@@ -32,7 +32,7 @@
 [240526_ModularArchitecture](https://github.com/Diana-yjh/TIL/blob/main/Architecture/240526_ModularArchitecture.md)</br>
 
 ## 📂 DesignPattern
-[240429_MVC](https://github.com/Diana-yjh/TIL/blob/main/Swift/240429_MVC.md)</br>
+[240429_MVC](https://github.com/Diana-yjh/TIL/blob/main/DesignPattern/240429_MVC.md)</br>
 [240501_SOLID](https://github.com/Diana-yjh/TIL/blob/main/DesignPattern/240501_SOLID.md)</br>
 [240513_MVVM](https://github.com/Diana-yjh/TIL/blob/main/DesignPattern/240513_MVVM.md)</br>
 [240525_FactoryMethod](https://github.com/Diana-yjh/TIL/blob/main/DesignPattern/240525_FactoryMethod.md)</br>
