@@ -1,9 +1,9 @@
 # 📝 TIL - 240530 @State, @Published, @Binding, @Observable
 ## 학습 내용
-[1. @State](#-1-State)</br>
-[2. @Binding](#-2-Binding)</br>
-[3. @Observable](#-3-Observable)</br>
-[4. @Published](#-4-Published)</br>
+[1. @State](#-1-@State)</br>
+[2. @Binding](#-2-@Binding)</br>
+[3. @Observable](#-3-@Observable)</br>
+[4. @Published](#-4-@Published)</br>
 [5. 참고 자료](#5-참고-자료)</br>
 
 </br>
