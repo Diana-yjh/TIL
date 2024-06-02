@@ -21,11 +21,11 @@
 [240521_DependencyInjection](https://github.com/Diana-yjh/TIL/blob/main/Swift/240521_DependencyInjection.md)</br>
 
 ## 📂 SwiftUI
-</br>
+[240530_@State, @Published, @Binding, @Observable](https://github.com/Diana-yjh/TIL/blob/main/SwiftUI/240530_%40State%2C%20%40Published%2C%20%40Binding%2C%20%40Observable.md)</br>
 
 ## 📂 Tuist
 [240527_Tuist](https://github.com/Diana-yjh/TIL/blob/main/Tuist/240527_Tuist.md)</br>
-[240528_ModularArchitecture](https://github.com/Diana-yjh/TIL/blob/main/Tuist/240528_ModularArchitecture.md)</br>
+[240528_The_ModularArchitecture](https://github.com/Diana-yjh/TIL/blob/main/Tuist/240528_The_ModularArchitecture.md)</br>
 
 ## 📂 Architecture
 [240426_Architecture](https://github.com/Diana-yjh/TIL/blob/main/Architecture/240426_Architecture.md)</br>
