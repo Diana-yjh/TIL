@@ -21,7 +21,7 @@
 [240521_DependencyInjection](https://github.com/Diana-yjh/TIL/blob/main/Swift/240521_DependencyInjection.md)</br>
 
 ## 📂 SwiftUI
-[240530_@State, @Published, @Binding, @Observable](https://github.com/Diana-yjh/TIL/blob/main/SwiftUI/240530_%40State%2C%20%40Published%2C%20%40Binding%2C%20%40Observable.md)</br>
+[240530_@State, @Binding](https://github.com/Diana-yjh/TIL/blob/main/SwiftUI/240530_%40State%2C%20%40Binding.md)</br>
 
 ## 📂 Tuist
 [240527_Tuist](https://github.com/Diana-yjh/TIL/blob/main/Tuist/240527_Tuist.md)</br>
