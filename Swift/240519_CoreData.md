@@ -15,7 +15,8 @@ CoreData가 지원하는 내용은 아래와 같습니다.</br>
 
 #### ✓ 1-1. 개별 또는 일괄 변경을 취소하거나 재실행
 CoreData는 특정 동작이 개별 도는 일괄 변경될 때 이것을 취소하거나 재실행할 수 있게 도와줍니다.</br>
-<img src = "" width = "400"/></br>
+
+<img src = "https://github.com/Diana-yjh/TIL/blob/main/Resources/CoreData/CoreData.png" width = "500"/></br>
 
 #### ✓ 1-2. 데이터의 백그라운드 처리
 Json 파싱을 객체로 변경하는 등의 백그라운드에서의 데이터 처리에 대한 UI를 막아줍니다.</br>
