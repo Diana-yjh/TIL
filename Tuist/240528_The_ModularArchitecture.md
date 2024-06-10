@@ -3,7 +3,8 @@
 해당 글은 Tuist 버전 4 를 기준으로 작성되었습니다.</br>
 
 ## 학습 내용
-[1. The ModularArchitecture?](#-1-The-ModularArchitecture란?)</br>
+[1. The ModularArchitecture란?](#-1-The-ModularArchitecture란?)</br>
+[2. 참고 자료](#2-참고-자료)</br>
 
 ### 1. The ModularArchitecture란?
 The ModularArchitecture은 Tuist3 버전의 MicroFeatures가 rename된 것 입니다.</br>
@@ -28,3 +29,5 @@ TMA에서의 모듈은 애플리케이션의 Feature를 나타내며 아래 다�
 |FeatureTest|Feature, Feature Testing|유닛과 실행 테스트|
 |FeatureTesting|Feature Interface|테스팅 데이터와 목(mock)|
 |FeatureExample|Feature Testing, Feature|테스트 앱|
+
+### 2. 참고 자료
