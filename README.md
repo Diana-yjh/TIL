@@ -3,6 +3,8 @@
 오늘의 기록은 내일의 나를 위한 것!</br>
 모든 문서의 언어는 `Swift`를 사용하고 있습니다.</br>
 
+24년 01월 이전의 기록 -> [Diana의 iOS 개발일기](https://yjhong.tistory.com/)</br>
+
 ## 📝 Category
 [Swift](#-Swift)</br>
 [SwiftUI](#-SwiftUI)</br>
