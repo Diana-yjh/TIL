@@ -26,6 +26,7 @@
 ## 📂 SwiftUI
 [240530_@State, @Binding](https://github.com/Diana-yjh/TIL/blob/main/SwiftUI/240530_%40State%2C%20%40Binding.md)</br>
 [240601_KakaoMaps_V2_with_SwiftUI](https://github.com/Diana-yjh/TIL/blob/main/SwiftUI/240601_KakaoMaps_V2_with_SwiftUI.md)</br>
+[240615_@State, @StateObject 비교](https://github.com/Diana-yjh/TIL/blob/main/SwiftUI/240615_%40State%2C%40StateObject_%EB%B9%84%EA%B5%90.md)</br>
 
 ## 📂 Combine
 [240610_Publisher,Subsriber](https://github.com/Diana-yjh/TIL/blob/main/Combine/240610_Publisher%2CSubsriber.md)</br>
