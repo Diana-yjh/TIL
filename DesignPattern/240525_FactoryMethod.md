@@ -17,7 +17,8 @@
 간단히 이야기하면 **객체의 생성을 부모 클래스가 아닌 자식 클래스에서 하겠다** 라는 의미입니다.</br>
 팩토리 메소드의 구조는 아래와 같습니다.</br>
 
-<img src = “https://github.com/Diana-yjh/TIL/blob/main/Resources/FactoryMethod/FactoryMethod.png?raw=true” width = “450” /> </br>
+(이미지 로드 오류)
+<img src = “https://github.com/Diana-yjh/TIL/blob/main/Resources/FactoryMethod/FactoryMethod.png” width = “450” /> </br>
 
 Swift에서 인터페이스는 Protocol 이라고 생각할 수 있습니다.</br>
 위 구조에서 Creator과 Project는 추상 타입(Abstract Type)이며 구현에 대한 청사진만을 가지고 있습니다.</br>
